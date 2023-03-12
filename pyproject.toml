@@ -7,6 +7,7 @@ authors = ["nikon <nikon2127@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 pyTelegramBotAPI = "^4.10.0"
+openai = "^0.27.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
@@ -14,3 +15,6 @@ pytest = "^5.2"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+telegram-chatgpt-bot = "telegram_chatgpt_bot.telegram_chatgpt_bot:main"
