@@ -3,11 +3,11 @@ import telebot
 import openai
 
 # Установить API-ключ OpenAI
-openai.api_key = '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'
+openai.api_key = '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'
 
 # Установить модель OpenAI и параметры генерации
 engine = "text-davinci-003"
-max_tokens = 600
+max_tokens = 4000
 temperature = 0.7
 
 # Установить TOKEN telegram
@@ -21,6 +21,7 @@ def send_welcome(message):
 
 @bot.message_handler(content_types=['text', 'document', 'audio'])
 def get_text_messages(message):
+    # print(message)
     # Сгенерировать ответ с помощью OpenAI API
     response = openai.Completion.create(
         engine=engine,
